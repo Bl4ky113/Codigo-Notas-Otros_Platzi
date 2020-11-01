@@ -1,0 +1,64 @@
+Conceptos:
+
+file: archivo a llamar
+
+commit: id de commit, que se obtiene con git log
+
+ReRe: "Repositorio Remoto"
+
+ReLo: "Repositorio Local"
+
+Dir: "directorio de trabajo local"
+
+//<*>//<*>//<*>//<*>//<*>//<*>//<*>//<*>//<*>//<*>//<*>//<*>//<*>//<*>//<*>//<*>//<*>//<*>//<*>//<*>//<*>//<*>//<*>//<*>//<*>//<*>//<*>//<*>//
+
+Los comandos más basicos de Git son:
+
+git init: inicia el repositorio
+
+git global: muestra la configuracion disponible del git{
+	-l: muestra la configuracion actual del git
+}
+
+git status: indica el status del repositorio
+
+git add <file>: Agrega el <file> a el Staging{
+	<file: .>: Agrega todos los <files> dentro del Dir
+}
+
+git commit -m "<mensaje>": Enviar el <file> a el repositorio
+
+git show <file>: Muestra del <file> los cambios de la version actual y la version anterior
+
+git log <flag> <file>: Muestra los commit's del <file>{
+	<flag: --stat>: Muestra los cambios exactos
+}
+
+git diff <commit_A> <commit_B>: Muestra los cambios del <commit_A> y el <commit_B>
+
+git checkout <commit> <file>: Cambia el <file> al el archivo que se especifica en el <commit>{
+	<commit: master>: Cambia a el <file> a la ultima version del master
+}
+
+git reset <flag> <commit>: !! Puede causar muchos problemas en el discoDuro, ReLo, Staging y Git Cambia el <file> a una version anterior, pero eliminando los commits posteriores a el <commit>{
+	<flag: --hard>: Elimina toda la informacion que esta en el staging
+	<flag: --soft>: Elimina los registros de Git, pero guarda los cambios que esten en Staging
+	<flag: HEAD>: Elimina los archivos del staging, para que estos no se envien en al ultimo commit
+}
+
+git rm <flag> <file>: !! Puede causar muchos problemas en el Stage; Este comando no se puede usar sin flags{
+	<flag: --cached>: Elimina <file> del staging y del proximo commit, pero los mantiene en el discoduro
+	<flag: --force>: Elimina <file> del staginn, de Git y del discoduro
+}
+
+git clone <urlReRe>: Copia y pega los archivos del Master del <urlReRe> y crea la base de datos de los cambios historicos en el repositorio local.
+
+git push: !!Puede tener varios errores y fallas ; Envia los cambios y los commits a <urlReRe>
+
+git fetch: Copia el <file> del <urlReRe> y lo pega en el ReLo
+
+git merge: Copia el <file> del <urlReRe> y lo pega en el Dir
+
+git pull: Hace la accion de "git fetch" y "git merge"
+
+//<*>//<*>//<*>//<*>//<*>//<*>//<*>//<*>//<*>//<*>//<*>//<*>//<*>//<*>//<*>//<*>//<*>//<*>//<*>//<*>//<*>//<*>//<*>//<*>//<*>//<*>//<*>//<*>//<*>//
